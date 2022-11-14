@@ -1,6 +1,6 @@
 # Template file for 'vivaldi'
 pkgname=vivaldi
-version=5.5.2805.38
+version=5.5.2805.44
 revision=1
 _release=1
 archs="x86_64"
@@ -14,7 +14,7 @@ license="custom:Proprietary"
 homepage="https://vivaldi.com"
 distfiles="https://downloads.vivaldi.com/stable/vivaldi-stable_${version}-${_release}_amd64.deb"
 _licenseUrl="https://vivaldi.com/privacy/vivaldi-end-user-license-agreement/"
-checksum=0c30824f41fcaf1d02540bf37dca839cf6bacf713d8950526ede670bfcb6c734
+checksum=f8fbda7905d2ae926768bdd411ae67eb7a3a333f1bdd957d84f71d416789b1f3
 repository=nonfree
 restricted=yes
 nostrip=yes
