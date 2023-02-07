@@ -1,0 +1,36 @@
+# Template file for 'python3-psycopg2-binary'
+pkgname=python3-psycopg2-binary
+version=2.9.5
+revision=1
+build_style=python3-pep517
+make_install_target="psycopg2_binary-${version}-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+hostmakedepends="python3-wheel wget"
+depends="python3"
+short_desc="PostgreSQL adapter for Python32"
+maintainer="Lucas da Costa <lcscosta@disroot.org>"
+license="LGPL-3.0-or-later"
+homepage="https://www.psycopg.org"
+changelog="https://raw.githubusercontent.com/psycopg/psycopg2/master/NEWS"
+distfiles="https://files.pythonhosted.org/packages/36/af/a9f06e2469e943364b2383b45b3209b40350c105281948df62153394b4a9/${make_install_target}"
+checksum=bcda1c84a1c533c528356da5490d464a139b6e84eb77cc0b432e38c5c6dd7882
+make_check=no # requires running postgres server on system
+
+do_fetch(){
+	mkdir -p ${wrksrc}
+	cd ${wrksrc}
+	wget ${distfiles}
+}
+
+do_extract() {
+        mkdir -p dist
+	mv ${make_install_target} dist/${make_install_target}
+}
+
+do_build() {
+	echo "nothing"
+}
+
+do_install() {
+	python3 -m installer --destdir "${DESTDIR}" \
+		dist/${make_install_target}
+}
