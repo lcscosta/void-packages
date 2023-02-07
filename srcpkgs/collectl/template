@@ -1,8 +1,7 @@
 # Template file for 'collectl'
 pkgname=collectl
-version=4.3.4
+version=4.3.7
 revision=1
-wrksrc="${pkgname}"
 conf_files="/etc/collectl.conf"
 depends="perl perl-Term-ReadKey"
 short_desc="Collects data that describes the current system status"
@@ -11,7 +10,7 @@ license="Artistic-1.0-Perl, GPL-2.0-only"
 homepage="https://collectl.sourceforge.net/"
 changelog="https://collectl.sourceforge.net/Releases.html"
 distfiles="${SOURCEFORGE_SITE}/collectl/collectl-${version}.src.tar.gz"
-checksum=962167527a1c1ec5e74a9c40dd93ca718f10ec79e44a29479a521497d17b0e41
+checksum=36a4cdf61c6880cc77fedf19a3bf10503e3f0783d77f589ba570a3006d501d5e
 
 do_install() {
 	export DESTDIR

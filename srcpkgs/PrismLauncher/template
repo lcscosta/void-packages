@@ -1,7 +1,7 @@
 # Template file for 'PrismLauncher'
 pkgname=PrismLauncher
-version=5.0
-revision=2
+version=6.3
+revision=1
 build_style=cmake
 configure_args="-DLauncher_BUILD_PLATFORM=Void"
 hostmakedepends="extra-cmake-modules openjdk8 pkg-config qt5-host-tools
@@ -13,7 +13,7 @@ maintainer="Philipp David <pd@3b.pm>"
 license="GPL-3.0-only"
 homepage="https://prismlauncher.org/"
 distfiles="https://github.com/PrismLauncher/PrismLauncher/releases/download/${version}/PrismLauncher-${version}.tar.gz"
-checksum=27c2c7e0c9aaa3450b7449683cfd2a9a941b7118ab83947de09285438e03c495
+checksum=fc1896df6422248dbd767d4a82066fe6044ae104354ebf75fc5ae92252f2fb1a
 
 if [ -z "$XBPS_CHECK_PKGS" ]; then
 	configure_args+=" -DBUILD_TESTING=0"
